@@ -16,7 +16,7 @@ export function Card () {
                 </div>
             </div>
             <div className="text-gray-400">
-            The service has experimented with changing how tweets work over the years to attract more users and to keep them on the site. The character limit was originally 140 characters when the service started, had media attachments no longer count in the mid-2010s.
+            <iframe width="170" height="" src="https://www.youtube.com/embed/uURH6dY8WAM?si=F6jmkkzudAcaC6t5" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
             </div>
         </div>
     )

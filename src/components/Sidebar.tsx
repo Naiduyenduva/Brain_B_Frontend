@@ -12,7 +12,7 @@ export function Sidebar () {
                 <DeleteIcon />
                 Second Brain
             </div>
-            <div className="p-2 pl-8 grid gap-5 mt-5 text-gray-500">
+            <div className="p-2 pl-14 grid gap-7 mt-10 text-gray-500">
                 <div className="flex gap-2 items-center">
                     <TwitterIcon />
                     Tweets

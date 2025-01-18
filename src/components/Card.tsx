@@ -15,11 +15,11 @@ export function Card () {
                     <DeletIcon />
                 </div>
             </div>
-            <div className="text-gray-400">
+            {/* <div className="text-gray-400">
                 <iframe width="170" height="" src="https://www.youtube.com/embed/uURH6dY8WAM?si=DmE6uF01Ezk" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
-            </div>
-            <div className="text-gray-400">
-            <iframe frameBorder="0" height="250" width="350" src="https://twitframe.com/show?url=https://twitter.com/abramarketing/status/1878797108364423352?s=20&t=GrVuuUU1OtpPrszgencMAA"></iframe>
+            </div> */}
+            <div className="w-auto h-auto">
+            <blockquote className="twitter-tweet"> <a href="https://t.co/YpHy54z71m">https://t.co/YpHy54z71m</a> <a href="https://t.co/zeg4cwhEYS">pic.twitter.com/zeg4cwhEYS</a><a href="https://twitter.com/Lucky49871195/status/1857827696593760522">December 29, 2024</a></blockquote> 
             </div>
         </div>
     )

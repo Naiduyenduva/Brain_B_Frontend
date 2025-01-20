@@ -10,7 +10,7 @@ export function Sidebar () {
         <div>
             <div className="flex gap-2 m-2 mt-5 font-bold text-xl items-center pl-3">
                 <DeleteIcon />
-                Second Brain
+                Brain B
             </div>
             <div className="p-2 pl-14 grid gap-7 mt-10 text-gray-500">
                 <div className="flex gap-2 items-center">

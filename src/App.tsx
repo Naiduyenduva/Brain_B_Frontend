@@ -8,7 +8,10 @@ function App() {
 
   return (
     <>
-    <div className="bg-gray-300 flex">
+    <div className="bg-slate-100 flex">
+      {/* <div className="flex justify-center items-center">
+        <Modal />
+      </div> */}
       <div className="min-w-60 h-screen border border-slate-900 fixed top-0 left-0">
         <Sidebar />
       </div>
@@ -22,13 +25,15 @@ function App() {
             <Button variant="primary" text="Add Content" startIcon={<PlusIcon />} />
           </div>
         </div>
-        <div className="p-8 grid grid-cols-3 gap-5">
-          <Card />
-          <Card />
-          <Card />
-          <Card />
-          <Card />
-          <Card />
+        <div className="p-8 grid grid-cols-4">
+          <Card link="https://twitter.com/Lucky49871195/status/1857827696593760522" type="twitter" />
+          <Card link="https://www.youtube.com/embed/uURH6dY8WAM?si=DmE6uF01Ezk" type="youtube" />
+          <Card link="https://twitter.com/Lucky49871195/status/1857827696593760522" type="twitter" />
+          <Card link="https://www.youtube.com/embed/uURH6dY8WAM?si=DmE6uF01Ezk" type="youtube" />
+          <Card link="https://www.youtube.com/embed/uURH6dY8WAM?si=DmE6uF01Ezk" type="youtube" />
+          <Card link="https://twitter.com/Lucky49871195/status/1857827696593760522" type="twitter" />
+          <Card link="https://www.youtube.com/embed/uURH6dY8WAM?si=DmE6uF01Ezk" type="youtube" />
+          <Card link="https://twitter.com/Lucky49871195/status/1857827696593760522" type="twitter" />
         </div>
       </div>
     </div>

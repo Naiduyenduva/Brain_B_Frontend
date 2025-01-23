@@ -4,6 +4,7 @@ import { Button } from '../components/Button'
 import { PlusIcon } from "../icons/PlusIcon"
 import { ShareIcon } from "../icons/ShareIcon"
 import { Modal } from '@/components/Modal'
+import { useState } from 'react'
 
 export function Dashboard () {
   const [modalOpen, setModalOpen] = useState(false);
@@ -23,9 +24,8 @@ export function Dashboard () {
               All Notes
             </div>
             <div className="flex gap-2">
-              <Button onClick={() => {
-          setModalOpen(true)}} variant="secondary" text="Share Brain" startIcon={<ShareIcon />} />
-              <Button variant="primary" text="Add Content" startIcon={<PlusIcon />} />
+              <Button variant="secondary" text="Share Brain" startIcon={<ShareIcon />} />
+              <Button  onClick={() => {setModalOpen(true)}} variant="primary" text="Add Content" startIcon={<PlusIcon />} />
             </div>
           </div>
           <div className="p-8 grid grid-cols-3 gap-5">

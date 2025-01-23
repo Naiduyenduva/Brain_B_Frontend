@@ -5,11 +5,14 @@ import { PlusIcon } from "../icons/PlusIcon"
 import { ShareIcon } from "../icons/ShareIcon"
 import { Modal } from '@/components/Modal'
 
-const Dashboard = () => {
+export function Dashboard () {
+  const [modalOpen, setModalOpen] = useState(false);
+
   return (
     <>
     <div>
-      <Modal />
+      <Modal open={modalOpen} onClose={() => {
+        setModalOpen(false);}} />
       <div className="bg-slate-100 flex">
         <div className="min-w-60 h-screen border border-slate-900 fixed top-0 left-0">
           <Sidebar />
@@ -20,15 +23,15 @@ const Dashboard = () => {
               All Notes
             </div>
             <div className="flex gap-2">
-              <Button variant="secondary" text="Share Brain" startIcon={<ShareIcon />} />
+              <Button onClick={() => {
+          setModalOpen(true)}} variant="secondary" text="Share Brain" startIcon={<ShareIcon />} />
               <Button variant="primary" text="Add Content" startIcon={<PlusIcon />} />
             </div>
           </div>
           <div className="p-8 grid grid-cols-3 gap-5">
-            <Card link="https://twitter.com/Lucky49871195/status/1857827696593760522" type="twitter" />
-            <Card link="https://twitter.com/Lucky49871195/status/1857827696593760522" type="twitter" />
-            <Card link="https://twitter.com/Lucky49871195/status/1857827696593760522" type="twitter" />
-            <Card link="https://twitter.com/Lucky49871195/status/1857827696593760522" type="twitter" />
+            <Card title='My tweet' link="https://twitter.com/Lucky49871195/status/1857827696593760522" type="twitter" />
+            <Card title='Harkirat Tweet' link="https://twitter.com/Lucky49871195/status/1880164024379404623" type="twitter" />
+            <Card title='how to earn' link="https://www.youtube.com/watch?v=SSEWhw3oPEk" type="youtube" />
           </div>
         </div>
       </div>
@@ -36,5 +39,3 @@ const Dashboard = () => {
       </>
     )
 }
-
-export default Dashboard

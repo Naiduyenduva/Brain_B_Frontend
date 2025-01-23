@@ -1,19 +1,26 @@
 import { DeletIcon } from "../icons/DeleteIcon";
-import { FileIcon } from "../icons/FileIcon";
+// import { FileIcon } from "../icons/FileIcon";
 import { ShareIcon } from "../icons/ShareIcon";
-
+import { TwitterIcon } from "../icons/TwitterIcon";
+import { VideoIcon } from "../icons/VideoIcon";
 
 interface userprops {
+    title: string,
     link: string,
     type: string
 }
-export function Card ({link,type}:userprops) {
+export function Card ({link,type,title}:userprops) {
     return (
         <div className="bg-white border-slate-200 p-2 border w-fit h-fit max-w-96 rounded-md px-2">
             <div className="flex gap-2 justify-between">
                 <div className="flex gap-2 items-center">
-                    <FileIcon />
-                    <h2 className="text-gray-800 font-semibold">Project Idea</h2>
+                    {
+                        type=="twitter" && <TwitterIcon />
+                    }
+                    {
+                        type == "youtube" && <VideoIcon />
+                    }
+                    <h2 className="text-gray-800 font-semibold">{title}</h2>
                 </div>
                 <div className="flex gap-2 items-center">
                     <ShareIcon />

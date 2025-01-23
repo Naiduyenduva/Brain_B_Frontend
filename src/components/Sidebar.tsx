@@ -1,4 +1,4 @@
-import { DeleteIcon } from "../icons/BrainIcon";
+import { BrainIcon } from "../icons/BrainIcon";
 import { FileIcon } from "../icons/FileIcon";
 import { LinkIcon } from "../icons/LinkIcon";
 import { TagIcon } from "../icons/TagIcon";
@@ -9,7 +9,7 @@ export function Sidebar () {
     return (
         <div>
             <div className="flex gap-2 m-2 mt-5 font-bold text-xl items-center pl-3">
-                <DeleteIcon />
+                <BrainIcon />
                 Brain B
             </div>
             <div className="p-2 pl-14 grid gap-7 mt-10 text-gray-500">

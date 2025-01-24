@@ -1,5 +1,5 @@
 import { DeletIcon } from "../icons/DeleteIcon";
-// import { FileIcon } from "../icons/FileIcon";
+import { FileIcon } from "../icons/FileIcon";
 import { ShareIcon } from "../icons/ShareIcon";
 import { TwitterIcon } from "../icons/TwitterIcon";
 import { VideoIcon } from "../icons/VideoIcon";
@@ -19,6 +19,9 @@ export function Card ({link,type,title}:userprops) {
                     }
                     {
                         type == "youtube" && <VideoIcon />
+                    }
+                    {
+                        type == "document" && <FileIcon />
                     }
                     <h2 className="text-gray-800 font-semibold">{title}</h2>
                 </div>

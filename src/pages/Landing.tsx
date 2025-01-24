@@ -10,7 +10,7 @@ export function Landing () {
             <div className="flex justify-between px-10 pt-5 mb-2">
                 <div className="flex gap-1">
                     <BrainIcon />
-                    <h1 className="font-semibold text-xl">BrainB</h1>
+                    <h1 className="font-bold text-xl">BrainB</h1>
                 </div>
                 <div className="flex gap-5">
                     <Link to="/signup"><Button variant="primary" text="Signup"/></Link>
@@ -19,7 +19,7 @@ export function Landing () {
             </div>
             {/* HomePage */}
             <div className="pt-20">
-                <h1 className="text-5xl font-bold tracking-tighter text-center bg-gradient-to-br from-blue-600 to-purple-600 bg-clip-text text-transparent">Second brain for your second works</h1>
+                <h1 className="text-6xl font-bold tracking-tighter text-center bg-gradient-to-br from-blue-600 to-purple-600 bg-clip-text text-transparent">Second brain for your second works</h1>
                 <h1 className="text-center text-2xl font-semibold pt-5 text-gray-700">Your digital memory, organized and always accessible.</h1>
                 <div className="ml-[500px] pt-5 flex gap-10">
                     <Link to="/signup"><Button variant="secondary" text="Get Started Now"/></Link>

@@ -1,8 +1,17 @@
 import { CrossIcon } from "@/icons/CrossIcon";
 import {Input} from "../../@/components/ui/input"
 import { Button } from "./Button";
+import axios from "axios";
 
 export function Modal({ open, onClose }:any) {
+
+  async function handlemodalcontent () {
+    try {
+      await axios.post("http://localhost:3000/api/v1/")
+    } catch (error) {
+      
+    }
+  }
     return (
       open && (
         <div className="fixed top-0 left-0 w-full h-full bg-black bg-opacity-50 flex items-center justify-center z-50">

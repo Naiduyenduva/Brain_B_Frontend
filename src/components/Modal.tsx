@@ -2,13 +2,43 @@ import { CrossIcon } from "@/icons/CrossIcon";
 import {Input} from "../../@/components/ui/input"
 import { Button } from "./Button";
 import axios from "axios";
+import { useState } from "react";
 
 export function Modal({ open, onClose }:any) {
 
+    const [ title, setTitle] = useState("");
+    const [ type, setType ] = useState("twitter");
+    const [ link, setLink ] = useState("");
+    const [ error, setError ] = useState(null);
+
+    function handleTitle (e:any) {
+      setTitle(e.target.value);
+    }
+    function handleType (e:any) {
+      setType(e.target.value);
+    }
+    function handleLink (e:any) {
+      setLink(e.target.value);
+    }
+    console.log(type)
+    
   async function handlemodalcontent () {
     try {
-      await axios.post("http://localhost:3000/api/v1/")
-    } catch (error) {
+      const jwt = localStorage.getItem("token");
+      console.log(jwt);
+      await axios.post("http://localhost:3000/api/v1/content",{
+        title,
+        type,
+        link
+      },
+      {
+        headers: {
+            "Authorization": jwt
+        }
+      });
+      console.log("yeah content added")
+    } catch (err:any) {
+      setError(err)
       
     }
   }
@@ -25,15 +55,15 @@ export function Modal({ open, onClose }:any) {
                 </button>
             </div>
             <div className="grid gap-2">
-            <Input placeholder="title" className="bg-gray-200 outline-none pl-2 h-10 border rounded-lg border-blue-800" />
-            <select className="text-gray-700 h-10 outline-none border rounded-lg border-blue-800">
-              <option>Twitter</option>
-              <option>Youtube</option>
-              <option>Document</option>
-              <option>Link</option>
+            <Input placeholder="title" className="bg-gray-200 outline-none pl-2 h-10 border rounded-lg border-blue-800" onChange={handleTitle} />
+            <select className="text-gray-700 h-10 outline-none border rounded-lg border-blue-800" onChange={handleType}>
+              <option value={"twitter"}>Twitter</option>
+              <option value={"youtube"}>Youtube</option>
+              <option value={"document"}>Document</option>
+              <option value={"link"}>Link</option>
             </select>
-            <Input placeholder="link" className="bg-gray-200 outline-none pl-2 h-10 border rounded-lg border-blue-800" />
-            <Button variant="primary" text="ADD" />
+            <Input placeholder="link" className="bg-gray-200 outline-none pl-2 h-10 border rounded-lg border-blue-800" onChange={handleLink} />
+            <Button variant="primary" text="ADD" onClick={handlemodalcontent} />
           </div>
           </div>
         </div>

@@ -2,6 +2,9 @@ import { Button } from "@/components/Button";
 import { BrainIcon } from "@/icons/BrainIcon";
 import Brain from "../assets/brainb.png"
 import { Link } from "react-router-dom";
+import { Subscription } from "@/components/Subscription ";
+import { Feature } from "@/components/Features";
+import { Footer } from "@/components/Footer";
 
 export function Landing () {
     return (
@@ -29,6 +32,21 @@ export function Landing () {
                     <img src={Brain} alt="Image" className="rounded-xl" />
                 </div>
             </div>
+            {/* Features */}
+            <h1 className="text-center text-4xl py-5 font-bold ">Features</h1>
+            <div className="mb-10 flex gap-5 justify-around px-20">
+                <Feature title="Twitter" description="Bookmark your saved tweets with embeddings which you bring them by adding the tweet link here."  />
+                <Feature title="Youtube" description="Ping/add your youtube videos with embedding to watch later/refer by adding the link here." />
+                <Feature title="Articles" description="Bring the articles/documents you have seen in the internet to read later and gain knowledge. Refer them Later" />
+            </div>
+            {/* Subscription plans */}
+            <h1 className="text-center text-4xl py-5 font-bold ">Subscription Plans</h1>
+            <div className="flex gap-5 justify-around mb-10 px-20">
+                <Subscription title="Free" amount="0" bkno="20" tweets={5} />
+                <Subscription title="Exclusive" amount="100" bkno="80" tweets={20} />
+                <Subscription title="Premium" amount="200" bkno="160" tweets={40} />
+            </div>
+            <Footer />
         </section>
     )
 }

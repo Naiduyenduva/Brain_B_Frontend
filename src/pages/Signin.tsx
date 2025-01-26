@@ -18,12 +18,14 @@ export function Signin () {
 
   async function handlleSignin () {
     try {
-      await axios.post("http://localhost:3000/api/v1/signin",{
+      const response = await axios.post("http://localhost:3000/api/v1/signin",{
         username,
         password
       })
-      navigate("/dashboard")
+      const jwt = response.data.token;
+      localStorage.setItem('token',jwt)
       alert("logged in successfull")
+      navigate("/dashboard")
     } catch (err:any) {
       setError(err)
     }

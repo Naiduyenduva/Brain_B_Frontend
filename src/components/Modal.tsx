@@ -4,7 +4,7 @@ import { Button } from "./Button";
 import axios from "axios";
 import { useState } from "react";
 
-export function Modal({ open, onClose }:any) {
+export function Modal({ open, onClose, setModalOpen }:any) {
 
     const [ title, setTitle] = useState("");
     const [ type, setType ] = useState("twitter");
@@ -36,6 +36,8 @@ export function Modal({ open, onClose }:any) {
             "Authorization": jwt
         }
       });
+      alert("Content added successfully")
+      setModalOpen(false);
       console.log("yeah content added")
     } catch (err:any) {
       setError(err)

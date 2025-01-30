@@ -12,7 +12,7 @@ export function Dashboard () {
   return (
     <>
     <div>
-      <Modal open={modalOpen} onClose={() => {
+      <Modal open={modalOpen} setModalOpen={setModalOpen} onClose={() => {
         setModalOpen(false);}} />
       <div className="bg-slate-100 flex">
         <div className="min-w-60 h-screen border border-slate-900 fixed top-0 left-0">
@@ -29,9 +29,9 @@ export function Dashboard () {
             </div>
           </div>
           <div className="p-8 grid grid-cols-3 gap-5">
-            <Card title='My tweet' link="https://twitter.com/Lucky49871195/status/1857827696593760522" type="twitter" />
-            <Card title='Harkirat Tweet' link="https://twitter.com/Lucky49871195/status/1880164024379404623" type="twitter" />
-            <Card title='how to earn' link="https://www.youtube.com/watch?v=SSEWhw3oPEk" type="youtube" />
+            <Card />
+            {/* <Card title='Harkirat Tweet' link="https://twitter.com/Lucky49871195/status/1880164024379404623" type="twitter" /> */}
+            {/* <Card title='how to earn' link="https://www.youtube.com/watch?v=SSEWhw3oPEk" type="youtube" /> */}
           </div>
         </div>
       </div>

@@ -30,8 +30,6 @@ export function Dashboard () {
           </div>
           <div className="p-8 grid grid-cols-3 gap-5">
             <Card />
-            {/* <Card title='Harkirat Tweet' link="https://twitter.com/Lucky49871195/status/1880164024379404623" type="twitter" /> */}
-            {/* <Card title='how to earn' link="https://www.youtube.com/watch?v=SSEWhw3oPEk" type="youtube" /> */}
           </div>
         </div>
       </div>

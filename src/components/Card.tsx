@@ -18,7 +18,7 @@ export function Card () {
         async function handleContent (){
             try {
                 const jwt = localStorage.getItem("token");
-               const response = await axios.get("http://localhost:3000/api/v1/content",
+               const response = await axios.get("https://brain-b-one.vercel.app/api/v1/content",
                 {
                     headers: {
                         "Authorization": jwt

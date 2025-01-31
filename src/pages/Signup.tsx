@@ -18,7 +18,7 @@ export function Signup () {
 
   async function handleSignup () {
     try {
-      const response = await axios.post("http://localhost:3000/api/v1/signup",{
+      const response = await axios.post("https://brain-b-one.vercel.app/api/v1/signup",{
         username,
         password
       })

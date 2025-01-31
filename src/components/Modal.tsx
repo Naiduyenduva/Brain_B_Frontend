@@ -26,7 +26,7 @@ export function Modal({ open, onClose, setModalOpen }:any) {
     try {
       const jwt = localStorage.getItem("token");
       console.log(jwt);
-      await axios.post("http://localhost:3000/api/v1/content",{
+      await axios.post("https://brain-b-one.vercel.app/api/v1/content",{
         title,
         type,
         link

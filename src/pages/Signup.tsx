@@ -28,6 +28,7 @@ export function Signup () {
       alert("You have signed up!")
     } catch (err:any) {
       setError(err.message)
+      console.log(error)
     }
   } 
   return (

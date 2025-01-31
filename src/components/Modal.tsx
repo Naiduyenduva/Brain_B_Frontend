@@ -20,7 +20,7 @@ export function Modal({ open, onClose, setModalOpen }:any) {
     function handleLink (e:any) {
       setLink(e.target.value);
     }
-    console.log(type)
+    console.log(error)
     
   async function handlemodalcontent () {
     try {

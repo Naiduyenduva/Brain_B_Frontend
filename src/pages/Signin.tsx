@@ -28,6 +28,7 @@ export function Signin () {
       navigate("/dashboard")
     } catch (err:any) {
       setError(err)
+      console.log(error)
     }
   }
   return (

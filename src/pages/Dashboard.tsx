@@ -14,7 +14,7 @@ export function Dashboard () {
     <div>
       <Modal open={modalOpen} setModalOpen={setModalOpen} onClose={() => {
         setModalOpen(false);}} />
-      <div className="bg-slate-100 flex h-full">
+      <div className="bg-slate-100 flex">
         <div className="min-w-60 h-screen border border-slate-900 fixed top-0 left-0">
           <Sidebar />
         </div>
@@ -28,7 +28,7 @@ export function Dashboard () {
               <Button  onClick={() => {setModalOpen(true)}} variant="primary" text="Add Content" startIcon={<PlusIcon />} />
             </div>
           </div>
-          <div className="p-8 grid grid-cols-3 gap-5">
+          <div className="p-8 grid grid-cols-3 gap-5 h-screen">
             <Card />
           </div>
         </div>

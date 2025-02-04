@@ -61,15 +61,11 @@ export function Card () {
                     <DeletIcon />
                 </div>
             </div>
-            {
-                item.type=="youtube" &&  <div className="text-gray-400">
-                <iframe width="180" height="" src={item.link} title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
-                </div>
-            }
-            {
-                item.type == "twitter" &&  <div className="w-auto h-auto">
-                <blockquote className="twitter-tweet"><a href={item.link}></a></blockquote> 
-                </div>  
+            {   item.type === "youtube" && <iframe className="w-full" src={item.link.replace("watch", "embed").replace("?v=", "/")} title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>}
+
+            {   item.type === "twitter" && <blockquote className="twitter-tweet">
+                    <a href={item.link.replace("x.com", "twitter.com")}></a> 
+                </blockquote>
             }
             {
                 item.type == "document" &&  <div className="w-auto h-auto">

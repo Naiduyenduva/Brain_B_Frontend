@@ -14,7 +14,7 @@ export function Dashboard () {
     <div>
       <Modal open={modalOpen} setModalOpen={setModalOpen} onClose={() => {
         setModalOpen(false);}} />
-      <div className="bg-slate-100 flex">
+      <div className="bg-slate-100 flex h-full">
         <div className="min-w-60 h-screen border border-slate-900 fixed top-0 left-0">
           <Sidebar />
         </div>

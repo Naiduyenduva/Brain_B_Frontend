@@ -38,8 +38,8 @@ export function Card () {
     return (
         <>
             {
-                content?.map((item:userprops)=> (
-                    <div className="bg-white border-slate-200 p-2 border w-fit h-fit max-w-96 rounded-md px-2">
+                content?.map((item:userprops, index:number)=> (
+                    <div className="bg-white border-slate-200 p-2 border w-fit h-fit max-w-96 rounded-md px-2" key={index}>
             <div className="flex gap-2 justify-between">
                 <div className="flex gap-2 items-center">
                     {

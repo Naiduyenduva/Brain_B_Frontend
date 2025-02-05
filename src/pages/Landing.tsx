@@ -5,8 +5,32 @@ import { Link } from "react-router-dom";
 import { Subscription } from "@/components/Subscription ";
 import { Feature } from "@/components/Features";
 import { Footer } from "@/components/Footer";
+import gsap from "gsap";
+import ScrollTrigger from "gsap/ScrollTrigger";
+import { useEffect, useRef } from "react";
+
+gsap.registerPlugin(ScrollTrigger);
 
 export function Landing () {
+    const sectionRef = useRef(null);
+
+    useEffect(() => {
+        gsap.fromTo(
+            sectionRef.current,
+            { opacity: 0, y: 100 },
+            {
+              opacity: 1,
+              y: 0,
+              duration: 1,
+              scrollTrigger: {
+                trigger: sectionRef.current,
+                start: "top 80%", // Starts when the top of the section is at 80% of the viewport
+                end: "top 30%",
+                toggleActions: "play none none reverse",
+              },
+            }
+          );
+    },[])
     return (
         <section>
             {/* navbar */}
@@ -21,14 +45,14 @@ export function Landing () {
                 </div>
             </div>
             {/* HomePage */}
-            <div className="pt-20">
+            <div className="pt-20 mt-20">
                 <h1 className="text-6xl font-bold tracking-tighter text-center bg-gradient-to-br from-blue-600 to-purple-600 bg-clip-text text-transparent">Second brain for your second works</h1>
                 <h1 className="text-center text-2xl font-semibold pt-5 text-gray-700">Your digital memory, organized and always accessible.</h1>
                 <div className="ml-[500px] pt-5 flex gap-10">
                     <Link to="/signup"><Button variant="secondary" text="Get Started Now"/></Link>
                     <Button variant="primary" text="Explore Services"/>
                 </div>
-                <div className="w-[1100px] ml-24 mt-10 mb-5 border-2 border-blue-900 rounded-xl">
+                <div ref={sectionRef} className="w-[1100px] ml-24 mt-20 mb-5 border-2 border-blue-900 rounded-xl">
                     <img src={Brain} alt="Image" className="rounded-xl" />
                 </div>
             </div>
